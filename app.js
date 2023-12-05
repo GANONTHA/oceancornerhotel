@@ -1,9 +1,10 @@
 const spans = document.querySelectorAll(".burger-menu");
 const lists = document.querySelectorAll(".nav-menu");
-const navList = document.querySelector("ul");
+const navList = document.querySelector(".mobile-menu ul");
 const burgerMenu = document.querySelector(".burger-menu");
 const navLinks = document.querySelectorAll(".mobile-menu ul li");
 
+console.log(navLinks);
 burgerMenu.addEventListener("click", () => {
   //Toggling the class Open in each element in order to make the menu disappear onlick and appear again after clicking again
   spans.forEach((span) => {
