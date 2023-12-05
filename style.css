@@ -240,6 +240,16 @@
   margin: -2px;
   border: 0;
 }
+.room .descriptions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.room .descriptions .price {
+  color: #01a89e;
+  font-weight: bolder;
+  letter-spacing: 2px;
+}
 .room .title {
   color: #3b444d;
   font-weight: 700;
@@ -309,6 +319,7 @@
   background-position: center;
   background-attachment: fixed;
   height: fit-content;
+  width: 100vw;
 }
 .pool {
   height: 50dvh;
@@ -323,10 +334,9 @@
   font-size: 24px;
   color: #3b444d;
 }
-.pool-images {
+.pool-images.room {
   width: 100vw;
   margin: 0;
-
   border-radius: 3px;
 }
 .pool-details {
@@ -337,7 +347,9 @@
   width: 100%;
   border-radius: 3px;
 }
+/* pricing */
 .pricing-plan {
+  width: 100vw;
   background: #fff;
   padding-bottom: 1rem;
 }
@@ -463,6 +475,11 @@
   .banner #header {
     font-size: 70px;
   }
+  /* BOOKING */
+  #booking {
+    padding-top: 5rem;
+  }
+
   /* FOODS */
   .food-details .food-description {
     font-size: 18px;
@@ -495,5 +512,182 @@
   .room .more,
   .room .btn {
     font-size: 20px;
+  }
+}
+@media screen and (min-device-width: 600px) and (max-device-width: 760px) {
+  /* NAV BAR */
+  .nav-bar {
+    height: 7rem;
+  }
+  /* HERO SECTION */
+  #hero-section {
+    opacity: 1;
+    z-index: -2;
+    position: relative;
+  }
+
+  .banner #header {
+    padding-top: 7rem;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    font-size: 67px;
+  }
+  /* BOOKING */
+  #booking {
+    height: 100dvh;
+  }
+  #booking form {
+    width: 80%;
+    margin: 2rem auto;
+  }
+  #booking button {
+    margin: 2rem 1.5rem;
+    width: 90%;
+  }
+  /* DISCOVER OUR HOTEL */
+  .presentation-img {
+    width: 90vw;
+    height: 45dvh;
+  }
+  /* ROOMS */
+
+  .room {
+    width: 95vw;
+    padding-bottom: 1rem;
+  }
+  .room .btn {
+    margin-left: 10rem;
+    width: 15rem;
+  }
+  /* RESTAURANT */
+  .menu-details img {
+    width: 12rem;
+    height: 10rem;
+    border-radius: 0.2rem;
+  }
+  .food-details {
+    justify-content: space-around;
+  }
+  .food-galerie {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .food-galerie img {
+    width: 48%;
+    border-radius: 0.2rem;
+  }
+  /* POOL */
+  #swimming-facilities {
+    width: 100vw;
+    margin: 0;
+  }
+  /* FOOTER */
+  /* contacts */
+  .contact img {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}
+@media screen and (min-device-width: 761px) and (max-device-width: 1024px) {
+  /* NAV BAR */
+  .nav-bar {
+    height: 10rem;
+  }
+  .nav-bar .nav-menu .mobile-menu ul li {
+    width: 10rem;
+  }
+  .nav-bar .nav-menu .mobile-menu ul li a {
+    font-size: 20px;
+  }
+  .nav-bar .nav-menu .mobile-menu ul {
+    width: 20rem;
+  }
+  .nav-bar .nav-menu .mobile-menu .burger-menu span {
+    height: 2px;
+  }
+  .nav-bar .nav-menu .mobile-menu .burger-menu {
+    top: 2.5rem;
+    right: 2rem;
+    height: 35px;
+    width: 45px;
+  }
+  /* HERO SECTION */
+  #hero-section {
+    opacity: 1;
+    z-index: -2;
+    position: relative;
+  }
+
+  .banner #header {
+    padding-top: 11rem;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    font-size: 75px;
+  }
+  .banner button {
+    width: 15rem;
+    font-size: 24px;
+    margin-bottom: 0;
+    margin-left: 30%;
+    margin-top: 15rem;
+  }
+  /* BOOKING */
+  #booking {
+    height: 70dvh;
+    padding-top: 7rem;
+    padding-bottom: 0;
+  }
+  #booking form {
+    width: 80%;
+    margin: 1rem auto;
+  }
+  #booking button {
+    margin: 2rem 1.5rem;
+    width: 90%;
+  }
+  /* DISCOVER OUR HOTEL */
+  .presentation-img {
+    width: 90vw;
+    height: 45dvh;
+  }
+  /* RESTAURANT */
+  .menu-details img {
+    width: 12rem;
+    height: 10rem;
+    border-radius: 0.2rem;
+  }
+  .food-details {
+    justify-content: space-around;
+  }
+  .food-galerie {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .food-galerie img {
+    width: 48%;
+    border-radius: 0.2rem;
+    height: 30vh;
+  }
+  /* FOOTER */
+  #footer .socials img {
+    width: 2.5rem;
+    border-radius: 2rem;
+  }
+  /* contacts */
+  .contact img {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  .copy-right {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+  }
+}
+
+@media screen and (min-device-width: 1024px) {
+  .mobile-menu {
+    display: none;
   }
 }
