@@ -3,6 +3,7 @@
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 /* NAVIGATION BAR */
 
@@ -12,7 +13,10 @@
   justify-content: space-between;
   background: #01a89e;
   height: 5rem;
-  z-index: 100;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  width: 100%;
 }
 .nav-bar .logo {
   padding: 1rem;
@@ -45,6 +49,9 @@
   padding: 0.5rem;
   background: #01a89e;
   width: 5rem;
+}
+.nav-bar .nav-menu .mobile-menu ul li.close {
+  display: none;
 }
 .nav-bar .nav-menu .mobile-menu ul li a {
   text-decoration: none;
@@ -118,7 +125,7 @@
   opacity: 1;
   color: #fff;
   font-size: 50px;
-  padding: 3rem 1.1rem;
+  padding: 5rem 1.1rem;
   color: #ebebeb;
   z-index: -5;
   opacity: 1;
@@ -291,4 +298,202 @@
   width: 100%;
   height: 40dvh;
   margin-bottom: 1rem;
+}
+
+/* POOL */
+#swimming-facilities {
+  height: fit-content;
+  background-image: url("assets/images/swimming/swim-banner-2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  height: fit-content;
+}
+.pool {
+  height: 50dvh;
+  width: 100%;
+  padding: 2px;
+  padding-top: 4rem;
+}
+.pool .title {
+  color: #01a89e;
+}
+.pool .details {
+  font-size: 24px;
+  color: #3b444d;
+}
+.pool-images {
+  width: 100vw;
+  margin: 0;
+
+  border-radius: 3px;
+}
+.pool-details {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.pool-details img {
+  width: 100%;
+  border-radius: 3px;
+}
+.pricing-plan {
+  background: #fff;
+  padding-bottom: 1rem;
+}
+.pricing {
+  height: 60dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 90%;
+  margin: 1rem;
+  background: #eff0f1;
+  border-radius: 5px;
+}
+.pricing h2 {
+  width: 70%;
+  text-align: center;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #fff;
+}
+.pricing h2:first-child {
+  color: #3b444d;
+}
+.pricing h2:nth-child(2) {
+  color: #01a89e;
+}
+.pricing ul li {
+  list-style-type: circle;
+  margin: 1rem;
+  color: #3b444d;
+}
+.plan-one h2:nth-child(2) {
+  color: #4facf9;
+}
+
+.plan-one .btn {
+  background: #4facf9;
+}
+.plan-two h2:nth-child(2) {
+  color: #8f51cc;
+}
+.plan-two .btn {
+  background: #8f51cc;
+}
+/* FOOTER */
+#footer {
+  height: fit-content;
+  background: #3b444d;
+  margin-top: -17px;
+}
+#footer .logo {
+  padding: 1.5rem;
+  font-size: 50px;
+  color: #01a89e;
+}
+#footer .title {
+  margin: 0;
+  text-align: left;
+}
+#footer .details {
+  color: #fff;
+  text-align: justify;
+  padding: 1rem;
+  opacity: 0.4;
+  margin: 0;
+}
+#footer .socials {
+  display: flex;
+  width: 50%;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 1rem;
+}
+#footer .socials img {
+  width: 1.5rem;
+  background: #fff;
+  padding: 0.2rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+/* contacts */
+.contacts {
+  padding-bottom: 1rem;
+  margin-top: 1rem;
+}
+.contact {
+  background: transparent;
+  color: #fff;
+}
+.contact p {
+  opacity: 0.6;
+}
+.contact img {
+  width: 4rem;
+  height: 4rem;
+}
+.contact .contact-details {
+  justify-content: space-around;
+}
+
+.copy-right {
+  color: #fff;
+  font-size: 0.7rem;
+  text-align: center;
+  opacity: 0.6;
+}
+/* MEDIA QUERIES */
+
+@media screen and (min-device-width: 390px) {
+  /* GLOBAL SELECTION */
+  .title {
+    font-size: 30px;
+  }
+  .details {
+    font-size: 20px;
+  }
+  /* HERO SECTION */
+  .banner button {
+    width: 13rem;
+    font-size: 20px;
+  }
+  .banner #header {
+    font-size: 70px;
+  }
+  /* FOODS */
+  .food-details .food-description {
+    font-size: 18px;
+  }
+  /* PRICING */
+  .pool-details .details {
+    font-size: 24px;
+  }
+
+  .pricing-plan .details {
+    font-size: 20px;
+  }
+  .pricing ul li {
+    font-size: 20px;
+  }
+  .pricing h2 {
+    font-size: 29px;
+  }
+
+  /* PRESENTATION */
+  .presentation-text {
+    font-size: 20px;
+  }
+  #presentation .details {
+    font-size: 22px;
+  }
+  /* ROOMS */
+  .room .details,
+  .room .sub-title,
+  .room .more,
+  .room .btn {
+    font-size: 20px;
+  }
 }
