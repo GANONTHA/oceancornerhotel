@@ -6,7 +6,9 @@
   scroll-behavior: smooth;
 }
 /* NAVIGATION BAR */
-
+nav {
+  max-width: 98vw;
+}
 .nav-bar {
   display: flex;
   flex-direction: row;
@@ -18,9 +20,12 @@
   top: 0;
   width: 100vw;
 }
-.nav-bar .logo {
+.nav-bar .logo a {
   padding: 1rem;
-  font-size: 50px;
+  font-size: 70px;
+  color: #fff;
+  font-weight: bolder;
+  cursor: pointer;
 }
 .nav-bar .nav-menu {
   padding: 2rem;
@@ -605,8 +610,11 @@
     flex-wrap: wrap;
     justify-content: space-between;
   }
+  .food-galerie .img-div {
+    width: 100%;
+  }
   .food-galerie img {
-    width: 48%;
+    width: 100%;
     border-radius: 0.2rem;
   }
   /* POOL */
@@ -697,10 +705,24 @@
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  .food-galerie img {
+  .food-galerie .img-div {
     width: 48%;
+  }
+  .food-galerie img {
+    width: 100%;
     border-radius: 0.2rem;
     height: 30vh;
+  }
+  /* SWIMMING */
+  #swimming-facilities .pool {
+    height: 20rem;
+  }
+  .plans {
+    height: fit-content;
+  }
+  .pricing {
+    width: 50%;
+    margin: 2rem auto;
   }
   /* FOOTER */
   #footer .socials img {
@@ -717,8 +739,271 @@
     letter-spacing: 2px;
   }
 }
+a {
+  text-decoration: none;
+  color: #fff;
+}
 
-@media screen and (min-device-width: 1024px) {
+@media screen and (min-device-width: 1024px) and (max-device-width: 1099px) {
+  /* NAVBAR */
+  .mobile-menu {
+    display: none;
+  }
+
+  .nav-menu {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  .desktop-menu {
+    display: flex;
+  }
+  .desktop-menu ul {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    list-style: none;
+    justify-content: space-between;
+  }
+  .desktop-menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .desktop-menu ul li a:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+    background: #85cec9;
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+  }
+  section {
+    margin: 1rem 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    max-width: 98vw;
+  }
+  /* HERO SECTION */
+
+  #hero-section {
+    height: 70dvh;
+  }
+  .banner-text #header {
+    width: 50vw;
+    margin: 0;
+    padding: 0;
+    margin-left: 2rem;
+    padding-top: 10.3rem;
+    color: #2572c0;
+  }
+  .banner-text {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 0;
+  }
+  .slider-text {
+    display: none;
+  }
+  .banner {
+    height: 70vh;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    animation: slider 12.5s infinite;
+  }
+  .banner #header {
+    color: #fff;
+  }
+  .banner.desktop-slide {
+    display: block;
+  }
+  .banner.five #header {
+    color: #beccdc;
+  }
+  .banner:nth-child(1) {
+    /* background-image: url("assets/images/banners/banner-5.jpg"); */
+    animation-delay: 0s;
+  }
+  .banner:nth-child(2) {
+    background-image: url("assets/images/banners/banner-5.jpg");
+    animation-delay: -2.5s;
+  }
+  .banner:nth-child(3) {
+    background-image: url("assets/images/banners/banner-2.jpg");
+    animation-delay: -5s;
+  }
+  .banner:nth-child(4) {
+    background-image: url("assets/images/banners/banner-3.jpg");
+    animation-delay: -7.5s;
+  }
+  .banner:nth-child(5) {
+    background-image: url("assets/images/banners/banner-4.jpg");
+    animation-delay: -10s;
+  }
+  @keyframes slider {
+    0%,
+    16%,
+    100% {
+      transform: translateX(0);
+      animation-timing-function: ease;
+    }
+    20% {
+      transform: translateX(-100%);
+      animation-timing-function: step-end;
+    }
+    96% {
+      transform: translateX(100%);
+      animation-timing-function: ease;
+    }
+  }
+  /* BOOKING */
+  #booking {
+    height: 15rem;
+    padding: 0;
+    align-items: center;
+  }
+  #booking form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  #booking form .btn {
+    width: 14rem;
+  }
+  /* PRESENTATION */
+  .about-image {
+    width: 95vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 2px solid #01a89e;
+  }
+
+  .about-image .presentation-section {
+    width: 40%;
+    margin: 1rem;
+    border: 0;
+  }
+  .about-image .presentation-section img {
+    width: 100%;
+    height: 30dvh;
+  }
+  /* ROOMS */
+  .room .details,
+  .room .title,
+  .room .sub-title,
+  .room .more {
+    font-size: 16px;
+    margin: 0;
+  }
+  #rooms {
+    height: 60dvh;
+  }
+  .room img {
+    height: 20dvh;
+  }
+  /* FOODS */
+  .about-image-food {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .about-image-food .menu-details {
+    width: 40%;
+  }
+  .about-image-food .food-details {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+  .about-image-food .menu-details img {
+    width: 15rem;
+  }
+  .food-galerie {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .food-galerie .lg {
+    display: block;
+  }
+  .food-galerie .img-div {
+    width: 30%;
+    border-radius: 5px;
+  }
+  .food-galerie .img-div img {
+    border-radius: 5px;
+    width: 100%;
+    height: 20dvh;
+  }
+  /* SWIMMING */
+  #swimming-facilities .details {
+    margin: 0;
+    padding: 0;
+  }
+  #swimming-facilities .pool {
+    margin: 0;
+    padding: 0;
+    height: 15dvh;
+  }
+  .pool .title {
+    color: #01a89e;
+  }
+  .pool-details {
+    width: 30%;
+    margin: 1rem;
+  }
+  .pricing-plan {
+    height: fit-content;
+  }
+  .plans {
+    height: 40dvh;
+    padding-bottom: 1rem;
+    width: 90vw;
+    padding-left: 2rem;
+  }
+  .pricing {
+    height: 90%;
+    width: 30%;
+  }
+  .pricing-plan .about-image {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  /* FOOTER */
+  #footer {
+    font-size: 15px;
+  }
+  #footer .socials {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    flex-wrap: wrap;
+
+    align-items: center;
+    width: 15rem;
+  }
+  #footer .services-list {
+    display: flex;
+    flex-direction: row;
+  }
+  #footer .about-image {
+    padding: 0;
+    border: 0;
+  }
+}
+
+@media screen and (min-device-width: 1100px) {
   /* NAVBAR */
 
   .mobile-menu {
@@ -755,11 +1040,15 @@
     padding: 0.4rem 1rem;
     border-radius: 5px;
   }
-  /* HERO SECTION */
-  a {
-    text-decoration: none;
-    color: #fff;
+  section {
+    margin: 1rem 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    max-width: 98vw;
   }
+  /* HERO SECTION */
+
   #hero-section {
     height: calc(100dvh);
   }
@@ -935,6 +1224,11 @@
   /* FOOTER */
   #footer {
     font-size: 15px;
+  }
+  #footer .logo {
+    padding: 0;
+    padding-left: 1rem;
+    padding-top: 2rem;
   }
   #footer .socials {
     display: flex;
