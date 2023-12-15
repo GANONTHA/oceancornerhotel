@@ -77,26 +77,48 @@
         </span>
       </div>
     </section>
+    <div class="popup" id="popup">
+      <h2>Success!</h2>
+      <p>The room is Available</p>
+      <button type="button" onclick="closePopup()">OK</button>
+    </div>
     <section id="booking">
       <p class="book title">Make a reservation</p>
-      <form>
+      <form action="#booking">
         <div class="arrival-date">
           <label for="arrival">Arrival Date</label>
-          <input type="text" id="arrival" placeholder="Your arrival date" />
+          <input
+            type="date"
+            id="arrival"
+            placeholder="Your arrival date"
+            required
+          />
         </div>
         <div class="departure-date">
-          <label for="departure">Arrival Date</label>
-          <input type="text" id="departure" placeholder="Your departure date" />
+          <label for="departure">Departure Date</label>
+          <input
+            type="date"
+            id="departure"
+            placeholder="Your departure date"
+            required
+          />
         </div>
         <div class="number-people">
-          <label for="number-people">Arrival Date</label>
+          <label for="number-people">Number of people</label>
           <input
             type="text"
             id="number-people"
             placeholder="Number of people"
+            required
           />
         </div>
-        <button class="check-availability btn">Check Availability</button>
+        <button
+          type="submit"
+          class="check-availability btn"
+          onclick="openPopup()"
+        >
+          Check Availability
+        </button>
       </form>
     </section>
     <section id="presentation">
@@ -138,7 +160,7 @@
             alt="bedroom one"
             class="room-img"
           />
-          <p class="title">Large bed from two People</p>
+          <p class="title">Large bed for two People</p>
           <div class="descriptions">
             <p class="sub-title">Unlimited Time</p>
             <p class="price">$70/night</p>

@@ -3,6 +3,7 @@ const lists = document.querySelectorAll(".nav-menu");
 const navList = document.querySelector(".mobile-menu ul");
 const burgerMenu = document.querySelector(".burger-menu");
 const navLinks = document.querySelectorAll(".mobile-menu ul li");
+const btn = document.querySelector(".check-availability");
 
 console.log(navLinks);
 burgerMenu.addEventListener("click", () => {
@@ -33,3 +34,18 @@ navLinks.forEach((link) => {
     navList.classList.toggle("open");
   });
 });
+
+// POPUP
+const popup = document.getElementById("popup");
+
+function openPopup() {
+  btn.innerHTML = "submitting...";
+  setTimeout(() => {
+    popup.classList.add("open-popup");
+    btn.innerHTML = "  Check Availability";
+  }, 2000);
+}
+
+function closePopup() {
+  popup.classList.remove("open-popup");
+}
